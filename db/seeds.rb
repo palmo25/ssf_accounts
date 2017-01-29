@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Revenue.create(
+  description: "donazione Maratona di Milano",
+  amount: 10.00,
+  typology: "erogazione liberale"
+)
+
+Revenue.create(
+  description: "donazione Maratona di Roma",
+  amount: 12.50,
+  typology: "erogazione liberale"
+)
+
+Revenue.create(
+  description: "contributo progetto Amica Acqua",
+  amount: 8000.00,
+  typology: "contributo"
+)
