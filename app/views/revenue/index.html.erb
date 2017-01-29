@@ -1,0 +1,18 @@
+<h1>Revenues </h1>
+
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Amount</th>
+    <th>Tipology</th>
+  </tr>
+
+  <% @revenues.each do |revenue| %>
+    <tr>
+      <td><%= revenue.description %></td>
+      <td><%= revenue.amount %></td>
+      <td><%= revenue.typology %></td>
+    </tr>
+  <% end %>
+</table>
