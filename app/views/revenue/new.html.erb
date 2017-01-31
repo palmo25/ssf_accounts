@@ -1,0 +1,10 @@
+
+<h2 class="text-center">Add revenue </h2>
+<%= bootstrap_form_for @revenue, url: {action: "create"}, html: {class: "form"} do |f| %>
+
+    <%= f.text_field :description %>
+    <%= f.number_field :amount  %>
+      <%= f.date_field :date  %>
+    <%= f.submit "Submit", class: "btn btn-success"%>
+
+<% end %>

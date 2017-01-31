@@ -2,7 +2,18 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+.container{
+  margin-top: 10px;
+}
 
- .revenue-list {
+.revenue-list {
    color: orange;
- }
+}
+
+.logo{
+  height: 30px;
+}
+
+.total-revenue{
+  font-weight: bold;
+}
