@@ -5,6 +5,10 @@ class RevenueController < ApplicationController
     @total_revenue = @revenues.map{|r| r['amount']}.reduce(0, :+)
   end
 
+  def show
+   @revenue = Revenue.find(params[:id])
+  end
+
   def new
     @revenue = Revenue.new
   end
@@ -15,9 +19,11 @@ class RevenueController < ApplicationController
     redirect_to @revenue
   end
 
+
+
   private
    def revenue_params
-     params.require(:revenue).permit(:description,:amount,:date,:typology)
+     params.require(:revenue).permit(:id,:description,:amount,:date,:typology)
    end
 
 end

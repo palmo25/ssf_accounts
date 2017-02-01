@@ -1,5 +1,5 @@
 <h2 class="text-center revenue-list">Revenues </h2>
-
+<%= link_to "Add new revenue", new_revenue_path, :class => "btn btn-success" %>
 
 <table class="table table-striped">
   <tr>
@@ -7,6 +7,8 @@
     <th>Amount €</th>
     <th>Date</th>
     <th>Tipology</th>
+    <th>Show</th>
+    <th>Delete</th>
   </tr>
 
   <% @revenues.each do |revenue| %>
@@ -15,12 +17,24 @@
       <td><%= revenue.amount %></td>
       <td><%= revenue.date  %></td>
       <td><%= revenue.typology %></td>
+      <td><%= link_to "Show", revenue, :class => "btn btn-info" %></td>
+      <td><button class="btn btn-danger">Delete</button></td>
     </tr>
 
   <% end %>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
   <tr class="total-revenue">
     <td>Total revenue</td>
     <td ><%= @total_revenue %></td>
+    <td></td>
+    <td></td>
     <td></td>
     <td></td>
   </tr>
