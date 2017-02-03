@@ -1,5 +1,19 @@
 
-<p>Show Page</p>
 
-<p><%= @revenue.id %></p>
-<p><%= @revenue.description %></p>
+<div class="row">
+  <div class="col-xs-3"></div>
+  <div class="col-xs-6">
+    <%= link_to "Edit revenue", edit_revenue_path, :class => "btn btn-primary edit-btn" %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Show Revenue n. <%= @revenue.id %> </h3>
+      </div>
+      <div class="panel-body">
+        <p><%= @revenue.description %></p>
+        <p><%= @revenue.amount %></p>
+        <p><%= @revenue.typology %></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-3"></div>
+</div>

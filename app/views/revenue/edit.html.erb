@@ -1,0 +1,13 @@
+
+
+<h2 class="text-center">Edit revenue </h2>
+
+<%= bootstrap_form_for(@revenue) do |f| %>
+
+    <%= f.text_field :description %>
+    <%= f.number_field :amount  %>
+      <%= f.date_field :date  %>
+      <%= f.select :typology,([['erogazione liberale'],['contributo']]) %>
+    <%= f.submit "Update", class: "btn btn-success"%>
+
+<% end %>
